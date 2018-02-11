@@ -14,21 +14,37 @@
     "test:watch": "jest --watch"
   },
   "jest": {
-    "setupFiles": ["<rootDir>/config/test-shim.js", "<rootDir>/config/test-setup.js"],
-    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "setupFiles": [
+      "<rootDir>/config/test-shim.js",
+      "<rootDir>/config/test-setup.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/config/test-preprocessor.js"
     },
-    "testMatch": ["**/__tests__/*.(test|spec).(ts|tsx|js)"]
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ]
   },
-  "keywords": ["Typescript", "React", "Parcel"],
+  "keywords": [
+    "Typescript",
+    "React",
+    "Parcel"
+  ],
   "author": "Ahn Dohyung",
   "license": "MIT",
   "dependencies": {
     "@types/react": "^16.0.29",
     "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.5",
