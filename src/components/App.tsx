@@ -1,10 +1,13 @@
 import * as React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import SearchField from '../containers/SearchField';
 
-const App = () => {
+const App: React.SFC = () => {
   return (
     <div>
-      <SearchField />
+      <BrowserRouter>
+        <Route path="/" component={SearchField} />
+      </BrowserRouter>
     </div>
   );
 };
