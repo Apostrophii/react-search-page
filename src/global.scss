@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
