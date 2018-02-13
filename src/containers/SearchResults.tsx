@@ -48,7 +48,7 @@ function levPercentage(s1: string, s2: string) {
 }
 
 function subStringWeight(s1: string, s2: string) {
-  return s1.indexOf(s2) !== -1 ? s2.length / 10 : 0;
+  return s1.indexOf(s2) !== -1 ? s2.length / 6 : 0;
 }
 
 const mapStateToProps = (state: State): Props => {

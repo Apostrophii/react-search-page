@@ -5,6 +5,10 @@ import Name from './Name';
 import DateOfBirth from './DateOfBirth';
 import PlaceOfBirth from './PlaceOfBirth';
 import Hometown from './Hometown';
+import CurrentResidence from './CurrentResidence';
+import Job from './Job';
+import Pets from './Pets';
+import FavoriteColors from './FavoriteColors';
 
 interface ResultsList {
   names: string[];
@@ -18,6 +22,10 @@ export const resultsList: ResultsList[] = [
   DateOfBirth,
   PlaceOfBirth,
   Hometown,
+  CurrentResidence,
+  Job,
+  Pets,
+  FavoriteColors,
 ];
 
 export const defaultList: ResultsList[] = [FullName, EyeColor, Hometown];

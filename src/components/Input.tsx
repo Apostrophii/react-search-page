@@ -18,7 +18,7 @@ export const Input: React.SFC<Props & DispatchProps> = ({
   return (
     <input
       value={inputValue}
-      placeholder="Luke's Search"
+      placeholder="Luke's search"
       onChange={e => onInputChange((e.target as HTMLInputElement).value)}
       className={css(styles.input)}
     />
