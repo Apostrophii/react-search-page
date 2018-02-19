@@ -29,7 +29,7 @@ export class ResultsContainer extends React.Component<Props & DispatchProps> {
       <div className={css(styles.container)}>
         {this.fullMatch() && (
           <div>
-            <div className={css(styles.term)}>{this.fullMatch()!.name}</div>
+            {/* <div className={css(styles.term)}>{this.fullMatch()!.name}</div> */}
             <div>{this.fullMatch()!.component()}</div>
           </div>
         )}

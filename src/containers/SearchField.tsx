@@ -23,9 +23,13 @@ class SearchField extends React.Component<AllProps> {
 
   componentWillUpdate(prevProps: AllProps, prevState: State) {
     if (
-      prevProps.history.location.pathname.substr(1) !== prevProps.inputValue
+      prevProps.history.location.pathname
+        .substr(1)
+        .replace(new RegExp('_', 'g'), ' ') !== prevProps.inputValue
     ) {
-      prevProps.history.push(prevProps.inputValue);
+      prevProps.history.push(
+        prevProps.inputValue.replace(new RegExp(' ', 'g'), '_'),
+      );
     }
   }
 
@@ -34,7 +38,9 @@ class SearchField extends React.Component<AllProps> {
   }
 
   handleLocationChange: LocationListener = location => {
-    this.props.onInputChange(location.pathname.substr(1));
+    this.props.onInputChange(
+      location.pathname.substr(1).replace(new RegExp('_', 'g'), ' '),
+    );
   };
 
   render() {

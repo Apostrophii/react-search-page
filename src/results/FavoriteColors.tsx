@@ -13,11 +13,12 @@ const CurrentResidence: React.SFC = () => {
 
 const styles = StyleSheet.create({
   black: {
-    fontWeight: '600',
+    fontWeight: 600,
     color: 'black',
+    textShadow: 'white 0px 0px 15px',
   },
   green: {
-    fontWeight: '600',
+    fontWeight: 600,
     color: 'limegreen',
   },
 });

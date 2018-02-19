@@ -9,6 +9,8 @@ import CurrentResidence from './CurrentResidence';
 import Job from './Job';
 import Pets from './Pets';
 import FavoriteColors from './FavoriteColors';
+import Resume from './Resume';
+import PersonalInfo from './PersonalInfo';
 
 interface ResultsList {
   names: string[];
@@ -26,6 +28,13 @@ export const resultsList: ResultsList[] = [
   Job,
   Pets,
   FavoriteColors,
+  Resume,
+  PersonalInfo,
 ];
 
-export const defaultList: ResultsList[] = [FullName, EyeColor, Hometown];
+export const defaultList: ResultsList[] = [
+  FullName,
+  EyeColor,
+  Hometown,
+  Resume,
+];
