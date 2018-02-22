@@ -1,17 +1,19 @@
 import * as React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
 import { StyleSheet, css } from 'aphrodite';
+import { History } from 'history';
 import SearchField from '../containers/SearchField';
 import SearchResults from '../containers/SearchResults';
 
-const App: React.SFC = () => {
+interface OwnProps {
+  history: History;
+}
+
+const App: React.SFC<OwnProps> = props => {
   return (
     <div className={css(styles.container)}>
       <div className={css(styles.column)}>
-        <BrowserRouter>
-          <Route path="/" component={SearchField} />
-        </BrowserRouter>
-        <SearchResults />
+        <SearchField {...props} />
+        <SearchResults {...props} />
       </div>
     </div>
   );
@@ -27,6 +29,6 @@ const styles = StyleSheet.create({
   },
   column: {
     width: '90vw',
-    maxWidth: '500px',
+    maxWidth: '550px',
   },
 });

@@ -2,8 +2,9 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import reducers from './reducers';
 import { initialState } from './state';
+import { BrowserRouter, Route } from 'react-router-dom';
+import reducers from './reducers';
 import App from './components/App';
 
 declare global {
@@ -25,7 +26,9 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <Route path="/" component={App} />
+    </BrowserRouter>
   </Provider>,
   document.getElementById('root'),
 );

@@ -9,16 +9,78 @@ import {
 } from '../components/ResultsContainer';
 import { resultsList, defaultList } from '../results/resultsList';
 import { Dispatch } from 'redux';
-import { updateSearchTerm } from '../actions';
+import { updateSearchTerm, UpdateSearchTermAction } from '../actions';
+import { History, UnregisterCallback, LocationListener } from 'history';
 
-type AllProps = Props & DispatchProps;
+interface OwnProps {
+  history: History;
+}
+
+type AllProps = Props & DispatchProps & OwnProps;
 
 const RESULTS_LENGTH = 3;
 const MIN_PRECISION = 0.4;
 
-const SearchResults: React.SFC<AllProps> = ({ ...props }) => {
-  return <ResultsContainer {...props} />;
-};
+class SearchResults extends React.Component<AllProps> {
+  lastHit = '';
+  unsubscribeFromHistory?: UnregisterCallback;
+
+  componentWillMount() {
+    const { history } = this.props;
+    this.unsubscribeFromHistory = history.listen(this.handleLocationChange);
+    this.updateInputFromLocation(history.location, history.action);
+  }
+
+  componentWillUnmount() {
+    if (this.unsubscribeFromHistory) this.unsubscribeFromHistory();
+  }
+
+  componentWillUpdate(nextProps: AllProps, nextState: State) {
+    const hit = nextProps.displayedResults.find(
+      r => r.name === nextProps.searchTerm,
+    );
+    if (!hit) {
+      return;
+    }
+
+    this.lastHit = hit.name;
+
+    if (
+      this.toTerm(nextProps.history.location.pathname) !== hit.name &&
+      this.props.searchTerm !== hit.name
+    ) {
+      nextProps.history.push(this.toPath(nextProps.searchTerm));
+    }
+  }
+
+  handleLocationChange: LocationListener = (location, action) => {
+    if (
+      action === 'POP' &&
+      this.lastHit !== this.props.searchTerm &&
+      this.lastHit !== this.toTerm(location.pathname)
+    ) {
+      this.props.history.push(this.toPath(this.lastHit));
+    } else {
+      this.updateInputFromLocation(location, action);
+    }
+  };
+
+  updateInputFromLocation: LocationListener = location => {
+    this.props.onInputChange(this.toTerm(location.pathname));
+  };
+
+  toTerm(path: string): string {
+    return path.substr(1).replace(new RegExp('_', 'g'), ' ');
+  }
+
+  toPath(term: string): string {
+    return term.replace(new RegExp(' ', 'g'), '_');
+  }
+
+  render() {
+    return <ResultsContainer {...this.props} />;
+  }
+}
 
 function getResults(searchTerm: string) {
   if (searchTerm === '') {
@@ -61,10 +123,11 @@ const mapStateToProps = (state: State): Props => {
 const mapDispatchToProps = (dispatch: Dispatch<State>): DispatchProps => {
   return {
     updateSearchTerm: value => dispatch(updateSearchTerm(value)),
+    onInputChange: value => dispatch(updateSearchTerm(value)),
   };
 };
 
-const ConnectedSearchResults = connect<Props, DispatchProps, {}, State>(
+const ConnectedSearchResults = connect<Props, DispatchProps, OwnProps, State>(
   mapStateToProps,
   mapDispatchToProps,
 )(SearchResults);

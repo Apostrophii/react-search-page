@@ -11,6 +11,7 @@ import Pets from './Pets';
 import FavoriteColors from './FavoriteColors';
 import Resume from './Resume';
 import PersonalInfo from './PersonalInfo';
+import Portfolio from './Portfolio';
 
 interface ResultsList {
   names: string[];
@@ -30,6 +31,7 @@ export const resultsList: ResultsList[] = [
   FavoriteColors,
   Resume,
   PersonalInfo,
+  Portfolio,
 ];
 
 export const defaultList: ResultsList[] = [

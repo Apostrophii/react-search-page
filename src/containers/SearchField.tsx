@@ -12,41 +12,9 @@ interface OwnProps {
 
 type AllProps = Props & DispatchProps & OwnProps;
 
-class SearchField extends React.Component<AllProps> {
-  unsubscribeFromHistory?: UnregisterCallback;
-
-  componentWillMount() {
-    const { history } = this.props;
-    this.unsubscribeFromHistory = history.listen(this.handleLocationChange);
-    this.handleLocationChange(history.location, history.action);
-  }
-
-  componentWillUpdate(prevProps: AllProps, prevState: State) {
-    if (
-      prevProps.history.location.pathname
-        .substr(1)
-        .replace(new RegExp('_', 'g'), ' ') !== prevProps.inputValue
-    ) {
-      prevProps.history.push(
-        prevProps.inputValue.replace(new RegExp(' ', 'g'), '_'),
-      );
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.unsubscribeFromHistory) this.unsubscribeFromHistory();
-  }
-
-  handleLocationChange: LocationListener = location => {
-    this.props.onInputChange(
-      location.pathname.substr(1).replace(new RegExp('_', 'g'), ' '),
-    );
-  };
-
-  render() {
-    return <Input {...this.props} />;
-  }
-}
+const SearchField: React.SFC<AllProps> = ({ ...props }) => {
+  return <Input {...props} />;
+};
 
 const mapStateToProps = (state: State): Props => {
   return { inputValue: state.searchTerm };

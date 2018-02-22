@@ -27,6 +27,7 @@ export const Input: React.SFC<Props & DispatchProps> = ({
 
 const styles = StyleSheet.create({
   input: {
+    boxSizing: 'border-box',
     padding: '5px',
     border: '4px solid black',
     borderRadius: '10px',

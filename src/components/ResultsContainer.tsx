@@ -15,6 +15,7 @@ export interface Props {
 
 export interface DispatchProps {
   updateSearchTerm: (value: string) => UpdateSearchTermAction;
+  onInputChange: (value: string) => UpdateSearchTermAction;
 }
 
 export class ResultsContainer extends React.Component<Props & DispatchProps> {
