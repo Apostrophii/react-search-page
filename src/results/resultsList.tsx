@@ -12,10 +12,16 @@ import FavoriteColors from './FavoriteColors';
 import Resume from './Resume';
 import PersonalInfo from './PersonalInfo';
 import Portfolio from './Portfolio';
+import ThisSite from './ThisSite';
+import { UpdateSearchTermAction } from '../actions';
+
+export interface LinkProps {
+  link: (value: string) => UpdateSearchTermAction;
+}
 
 interface ResultsList {
   names: string[];
-  component: () => JSX.Element;
+  component: (props: LinkProps) => JSX.Element;
 }
 
 export const resultsList: ResultsList[] = [
@@ -32,6 +38,7 @@ export const resultsList: ResultsList[] = [
   Resume,
   PersonalInfo,
   Portfolio,
+  ThisSite,
 ];
 
 export const defaultList: ResultsList[] = [

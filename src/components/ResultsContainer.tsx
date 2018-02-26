@@ -1,21 +1,26 @@
 import * as React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { UpdateSearchTermAction } from '../actions';
+import { UpdateSearchTermAction, UpdateLastHitAction } from '../actions';
+import { styles as appStyles } from '../styles';
+import { LinkProps } from '../results/resultsList';
+import { Link } from '../results/Link';
 
 interface DisplayResults {
   name: string;
   score?: number;
-  component: () => JSX.Element;
+  component: (props: LinkProps) => JSX.Element;
 }
 
 export interface Props {
   searchTerm: string;
+  lastHit: string;
   displayedResults: DisplayResults[];
+  inputAnimation: boolean;
 }
 
 export interface DispatchProps {
   updateSearchTerm: (value: string) => UpdateSearchTermAction;
-  onInputChange: (value: string) => UpdateSearchTermAction;
+  updateLastHit: (value: string) => UpdateLastHitAction;
 }
 
 export class ResultsContainer extends React.Component<Props & DispatchProps> {
@@ -29,19 +34,19 @@ export class ResultsContainer extends React.Component<Props & DispatchProps> {
     return (
       <div className={css(styles.container)}>
         {this.fullMatch() && (
-          <div>
-            {/* <div className={css(styles.term)}>{this.fullMatch()!.name}</div> */}
-            <div>{this.fullMatch()!.component()}</div>
+          <div
+            className={css(
+              this.props.inputAnimation && styles.fadeIn,
+              styles.fullMatch,
+            )}
+          >
+            {this.fullMatch()!.component({ link: this.props.updateSearchTerm })}
           </div>
         )}
         {!this.fullMatch() &&
           this.props.displayedResults.map(r => (
-            <div
-              key={r.name}
-              className={css(styles.term, styles.link)}
-              onClick={() => this.props.updateSearchTerm(r.name)}
-            >
-              {r.name}
+            <div key={r.name} className={css(styles.listItem)}>
+              <Link link={this.props.updateSearchTerm}>{r.name}</Link>
             </div>
           ))}
       </div>
@@ -49,19 +54,31 @@ export class ResultsContainer extends React.Component<Props & DispatchProps> {
   }
 }
 
+const fadeInAnimation = {
+  '0%': {
+    opacity: 0,
+  },
+  '100%': {
+    opacity: 1,
+  },
+};
+
 const styles = StyleSheet.create({
   container: {
     fontSize: '26px',
-    marginTop: '20px',
+    lineHeight: '36px',
+    marginTop: '24px',
   },
-  term: {
+  listItem: {
+    marginBottom: '16px',
     fontWeight: 'bold',
   },
-  link: {
-    cursor: 'pointer',
-    color: 'deepskyblue',
-    ':hover': {
-      color: 'black',
-    },
+  fullMatch: {
+    opacity: 0,
+  },
+  fadeIn: {
+    animationName: [fadeInAnimation],
+    animationDuration: '1.2s',
+    animationFillMode: 'forwards',
   },
 });

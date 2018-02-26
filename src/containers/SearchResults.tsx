@@ -9,8 +9,13 @@ import {
 } from '../components/ResultsContainer';
 import { resultsList, defaultList } from '../results/resultsList';
 import { Dispatch } from 'redux';
-import { updateSearchTerm, UpdateSearchTermAction } from '../actions';
+import {
+  updateSearchTerm,
+  UpdateSearchTermAction,
+  updateLastHit,
+} from '../actions';
 import { History, UnregisterCallback, LocationListener } from 'history';
+import DefaultResult from '../results/DefaultResult';
 
 interface OwnProps {
   history: History;
@@ -18,11 +23,10 @@ interface OwnProps {
 
 type AllProps = Props & DispatchProps & OwnProps;
 
-const RESULTS_LENGTH = 3;
+const RESULTS_LENGTH = 9;
 const MIN_PRECISION = 0.4;
 
 class SearchResults extends React.Component<AllProps> {
-  lastHit = '';
   unsubscribeFromHistory?: UnregisterCallback;
 
   componentWillMount() {
@@ -35,7 +39,7 @@ class SearchResults extends React.Component<AllProps> {
     if (this.unsubscribeFromHistory) this.unsubscribeFromHistory();
   }
 
-  componentWillUpdate(nextProps: AllProps, nextState: State) {
+  componentWillReceiveProps(nextProps: AllProps) {
     const hit = nextProps.displayedResults.find(
       r => r.name === nextProps.searchTerm,
     );
@@ -43,7 +47,7 @@ class SearchResults extends React.Component<AllProps> {
       return;
     }
 
-    this.lastHit = hit.name;
+    this.props.updateLastHit(hit.name);
 
     if (
       this.toTerm(nextProps.history.location.pathname) !== hit.name &&
@@ -56,17 +60,17 @@ class SearchResults extends React.Component<AllProps> {
   handleLocationChange: LocationListener = (location, action) => {
     if (
       action === 'POP' &&
-      this.lastHit !== this.props.searchTerm &&
-      this.lastHit !== this.toTerm(location.pathname)
+      this.props.lastHit !== this.props.searchTerm &&
+      this.props.lastHit !== this.toTerm(location.pathname)
     ) {
-      this.props.history.push(this.toPath(this.lastHit));
+      this.props.history.push(this.toPath(this.props.lastHit));
     } else {
       this.updateInputFromLocation(location, action);
     }
   };
 
   updateInputFromLocation: LocationListener = location => {
-    this.props.onInputChange(this.toTerm(location.pathname));
+    this.props.updateSearchTerm(this.toTerm(location.pathname));
   };
 
   toTerm(path: string): string {
@@ -84,11 +88,19 @@ class SearchResults extends React.Component<AllProps> {
 
 function getResults(searchTerm: string) {
   if (searchTerm === '') {
-    return defaultList.map(r => ({
-      name: r.names[0],
-      component: r.component,
-    }));
+    return [
+      {
+        name: '',
+        component: DefaultResult.component,
+      },
+    ];
   }
+  // if (searchTerm === '') {
+  //   return defaultList.map(r => ({
+  //     name: r.names[0],
+  //     component: r.component,
+  //   }));
+  // }
   return resultsList
     .map(r => ({
       ...r.names
@@ -100,6 +112,7 @@ function getResults(searchTerm: string) {
       component: r.component,
     }))
     .filter(r => r.score > MIN_PRECISION)
+    .sort((a, b) => b.score - a.score)
     .slice(0, RESULTS_LENGTH);
 }
 
@@ -117,13 +130,15 @@ const mapStateToProps = (state: State): Props => {
   return {
     displayedResults: getResults(state.searchTerm),
     searchTerm: state.searchTerm,
+    lastHit: state.lastHit,
+    inputAnimation: state.inputAnimation,
   };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch<State>): DispatchProps => {
   return {
     updateSearchTerm: value => dispatch(updateSearchTerm(value)),
-    onInputChange: value => dispatch(updateSearchTerm(value)),
+    updateLastHit: value => dispatch(updateLastHit(value)),
   };
 };
 

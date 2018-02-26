@@ -1,0 +1,36 @@
+import * as React from 'react';
+import { StyleSheet, css } from 'aphrodite';
+import { styles } from '../styles';
+import { LinkProps } from './resultsList';
+import { Link } from './Link';
+
+const ThisSite: React.SFC<LinkProps> = props => {
+  return (
+    <div>
+      <div className={css(styles.paragraph)}>
+        <div>
+          This site is <Link {...props}>Luke Travis</Link>' search page
+        </div>
+        <div className={css(styles.aside)}>
+          (And he's pretty stoked you're here!)
+        </div>
+      </div>
+      <div>
+        Feel free to check out some of my <Link {...props}>projects</Link>, see
+        where I'm{' '}
+        <Link {...props} term="current address">
+          currently working
+        </Link>, find out if we have the same{' '}
+        <Link {...props}>favorite food</Link>, or search for anything else that
+        strikes your fancy
+      </div>
+    </div>
+  );
+};
+
+const ThisSiteResult = {
+  names: ['this site', 'this website'],
+  component: (props: LinkProps) => <ThisSite {...props} />,
+};
+
+export default ThisSiteResult;

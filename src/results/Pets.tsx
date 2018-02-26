@@ -5,7 +5,7 @@ const Pets: React.SFC = () => {
 };
 
 const PetsResult = {
-  names: ['pets'],
+  names: ['pets', 'cats'],
   component: () => <Pets />,
 };
 
