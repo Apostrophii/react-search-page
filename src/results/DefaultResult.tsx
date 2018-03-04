@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { LinkProps } from './resultsList';
-import { Link } from './Link';
+import { Link, LinkProps } from './Link';
 
-const DefaultResult: React.SFC<LinkProps> = props => {
+const Comp: React.SFC<LinkProps> = props => {
   return (
     <div className={css(styles.defaultResult)}>
       <div className={css(styles.loud)}>Hi there!</div>
@@ -27,9 +26,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const DefaultResultResult = {
+const CompResult = {
   names: [''],
-  component: (props: LinkProps) => <DefaultResult {...props} />,
+  component: (props: LinkProps) => <Comp {...props} />,
 };
 
-export default DefaultResultResult;
+export default CompResult;

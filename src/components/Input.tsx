@@ -83,14 +83,14 @@ export const Input: React.SFC<Props & DispatchProps> = ({
     },
     secondBoxAnimation: {
       animationName: [slideAnimation],
-      animationDelay: '0.05s',
+      animationDelay: '0.06s',
     },
     thirdBox: {
       backgroundColor: '#0BEFBE',
     },
     thirdBoxAnimation: {
       animationName: [slideAnimation],
-      animationDelay: '0.1s',
+      animationDelay: '0.12s',
     },
   });
 

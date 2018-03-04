@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-const FullName: React.SFC = () => {
+const Comp: React.SFC = () => {
   return <div>Luke George Muller Travis</div>;
 };
 
-const FullNameResult = {
+const CompResult = {
   names: ['full name'],
-  component: () => <FullName />,
+  component: () => <Comp />,
 };
 
-export default FullNameResult;
+export default CompResult;

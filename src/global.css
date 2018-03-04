@@ -4,6 +4,8 @@ body {
   /* font-family: 'Barlow Semi Condensed', sans-serif; */
   font-family: 'Assistant', sans-serif;
 
+  background-color: #eff1f0;
+
   /* background-color: rgb(32, 32, 32);
   background-image: linear-gradient(
       45deg,
@@ -33,4 +35,8 @@ a {
 
 a:hover {
   color: deepskyblue;
+}
+
+ul {
+  margin: 0;
 }

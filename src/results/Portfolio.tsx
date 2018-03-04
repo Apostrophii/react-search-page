@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-const Portfolio: React.SFC = () => {
+const Comp: React.SFC = () => {
   return <div>Portfolio stuff...</div>;
 };
 
-const PortfolioResult = {
+const CompResult = {
   names: ['portfolio', 'things worked on'],
-  component: () => <Portfolio />,
+  component: () => <Comp />,
 };
 
-export default PortfolioResult;
+export default CompResult;

@@ -1,10 +1,14 @@
 import * as React from 'react';
 
-const PersonalInfo: React.SFC = () => {
-  return <div>Sorry, don't have one :P</div>;
+const Comp: React.SFC = () => {
+  return (
+    <div>
+      Sorry, can't just be giving this out to <i>anyone</i> on the internet haha
+    </div>
+  );
 };
 
-const PersonalInfoResult = {
+const CompResult = {
   names: [
     'ssn',
     'social security number',
@@ -16,7 +20,7 @@ const PersonalInfoResult = {
     'credit card',
     'bank account',
   ],
-  component: () => <PersonalInfo />,
+  component: () => <Comp />,
 };
 
-export default PersonalInfoResult;
+export default CompResult;

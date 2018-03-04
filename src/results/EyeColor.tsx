@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
-const EyeColor: React.SFC = () => {
+const Comp: React.SFC = () => {
   return <div className={css(styles.blue)}>Blue</div>;
 };
 
@@ -11,9 +11,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const EyeColorResult = {
+const CompResult = {
   names: ['eye color'],
-  component: () => <EyeColor />,
+  component: () => <Comp />,
 };
 
-export default EyeColorResult;
+export default CompResult;

@@ -1,32 +1,33 @@
 import * as React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { css } from 'aphrodite';
+import { styles } from '../styles';
 
-const Resume: React.SFC = () => {
+const Comp: React.SFC = () => {
   return (
     <ul>
-      <li className={css(styles.bulletPoint)}>
+      <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>LUKE TRAVIS</div>
         (code + design)
       </li>
-      <li className={css(styles.bulletPoint, styles.marginTop)}>
+      <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>EXPERIENCED</div>
         with JS, Typescript, Angular 2, React, Node, Python, Git, Bash, and
         others
       </li>
-      <li className={css(styles.bulletPoint, styles.marginTop)}>
+      <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>WORKING</div>
         currently at K3 (a web app development firm) for +2 years and has been
         working in tech related positions for 6 years
       </li>
-      <li className={css(styles.bulletPoint, styles.marginTop)}>
+      <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>GRADUATED</div>
         with a BS in Computer Science from Walla Walla Univeristy
       </li>
-      <li className={css(styles.bulletPoint, styles.marginTop)}>
+      <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>PORTFOLIO</div>
         at luketravis.io/portfolio
       </li>
-      <li className={css(styles.bulletPoint, styles.marginTop)}>
+      <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>CONTACT</div>
         at me@luketravis.io
       </li>
@@ -34,23 +35,9 @@ const Resume: React.SFC = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  bulletPoint: {
-    fontWeight: 300,
-  },
-  marginTop: {
-    marginTop: '30px',
-  },
-  bold: {
-    display: 'inline',
-    marginRight: '5px',
-    fontWeight: 600,
-  },
-});
-
-const ResumeResult = {
+const CompResult = {
   names: ['resume'],
-  component: () => <Resume />,
+  component: () => <Comp />,
 };
 
-export default ResumeResult;
+export default CompResult;

@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { css } from 'aphrodite';
 import { styles } from '../styles';
 import { LinkProps } from './resultsList';
+
+export { LinkProps } from './resultsList';
 
 export const Link: React.SFC<LinkProps & { term?: string }> = props => {
   return (

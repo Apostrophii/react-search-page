@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 
-const CurrentResidence: React.SFC = () => {
+const Comp: React.SFC = () => {
   return (
     <div>
       I actually don't have a favorite color, but my favorite color combination
@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const CurrentResidenceResult = {
+const CompResult = {
   names: ['favorite color'],
-  component: () => <CurrentResidence />,
+  component: () => <Comp />,
 };
 
-export default CurrentResidenceResult;
+export default CompResult;

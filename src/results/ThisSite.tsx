@@ -1,10 +1,9 @@
 import * as React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { css } from 'aphrodite';
 import { styles } from '../styles';
-import { LinkProps } from './resultsList';
-import { Link } from './Link';
+import { Link, LinkProps } from './Link';
 
-const ThisSite: React.SFC<LinkProps> = props => {
+const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
       <div className={css(styles.paragraph)}>
@@ -18,7 +17,7 @@ const ThisSite: React.SFC<LinkProps> = props => {
       <div>
         Feel free to check out some of my <Link {...props}>projects</Link>, see
         where I'm{' '}
-        <Link {...props} term="current address">
+        <Link {...props} term="current work">
           currently working
         </Link>, find out if we have the same{' '}
         <Link {...props}>favorite food</Link>, or search for anything else that
@@ -28,9 +27,9 @@ const ThisSite: React.SFC<LinkProps> = props => {
   );
 };
 
-const ThisSiteResult = {
+const CompResult = {
   names: ['this site', 'this website'],
-  component: (props: LinkProps) => <ThisSite {...props} />,
+  component: (props: LinkProps) => <Comp {...props} />,
 };
 
-export default ThisSiteResult;
+export default CompResult;

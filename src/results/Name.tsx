@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-const Name: React.SFC = () => {
+const Comp: React.SFC = () => {
   return <div>Luke</div>;
 };
 
-const NameResult = {
+const CompResult = {
   names: ['name'],
-  component: () => <Name />,
+  component: () => <Comp />,
 };
 
-export default NameResult;
+export default CompResult;

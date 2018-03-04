@@ -13,6 +13,13 @@ import Resume from './Resume';
 import PersonalInfo from './PersonalInfo';
 import Portfolio from './Portfolio';
 import ThisSite from './ThisSite';
+import Luke from './Luke';
+import ClimbingMountStHelens from './ClimbingMountStHelens';
+import Swivel from './Swivel';
+import TheLemonTree from './TheLemonTree';
+import EuropaUniversalis from './EuropaUniversalis';
+import Projects from './Projects';
+import FavoriteFood from './FavoriteFood';
 import { UpdateSearchTermAction } from '../actions';
 
 export interface LinkProps {
@@ -39,6 +46,13 @@ export const resultsList: ResultsList[] = [
   PersonalInfo,
   Portfolio,
   ThisSite,
+  Luke,
+  ClimbingMountStHelens,
+  Swivel,
+  TheLemonTree,
+  EuropaUniversalis,
+  Projects,
+  FavoriteFood,
 ];
 
 export const defaultList: ResultsList[] = [

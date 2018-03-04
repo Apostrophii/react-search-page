@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-const DateOfBirth: React.SFC = () => {
-  return <div>1994.04.22</div>;
+const Comp: React.SFC = () => {
+  return <div>April 22, 1994</div>;
 };
 
-const DateOfBirthResult = {
+const CompResult = {
   names: ['date of birth', 'birthday'],
-  component: () => <DateOfBirth />,
+  component: () => <Comp />,
 };
 
-export default DateOfBirthResult;
+export default CompResult;

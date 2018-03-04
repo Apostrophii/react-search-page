@@ -1,19 +1,19 @@
 import * as React from 'react';
 
-const PlaceOfBirth: React.SFC = () => {
+const Comp: React.SFC = () => {
   return (
     <div>
       Berkeley, CA{' '}
-      <a href="https://www.google.com/maps/place/Berkeley,CA">
+      <a href="https://www.google.com/maps/place/Berkeley,CA" target="_blank">
         &lt;Google Maps&gt;
       </a>
     </div>
   );
 };
 
-const PlaceOfBirthResult = {
+const CompResult = {
   names: ['place of birth', 'birthplace'],
-  component: () => <PlaceOfBirth />,
+  component: () => <Comp />,
 };
 
-export default PlaceOfBirthResult;
+export default CompResult;

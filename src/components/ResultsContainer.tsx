@@ -2,8 +2,7 @@ import * as React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import { UpdateSearchTermAction, UpdateLastHitAction } from '../actions';
 import { styles as appStyles } from '../styles';
-import { LinkProps } from '../results/resultsList';
-import { Link } from '../results/Link';
+import { Link, LinkProps } from '../results/Link';
 
 interface DisplayResults {
   name: string;
@@ -65,9 +64,9 @@ const fadeInAnimation = {
 
 const styles = StyleSheet.create({
   container: {
-    fontSize: '26px',
+    fontSize: '22px',
     lineHeight: '36px',
-    marginTop: '24px',
+    marginTop: '36px',
   },
   listItem: {
     marginBottom: '16px',
