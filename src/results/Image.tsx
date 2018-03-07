@@ -7,8 +7,8 @@ export const Image: React.SFC<{
   tag?: string;
 }> = props => {
   return (
-    <div className={css(styles.image, styles.paragraph)}>
-      <img className={css(styles.fullWidthMax)} src={props.src} />
+    <div className={css(styles.imageGroup, styles.paragraph)}>
+      <img className={css(styles.image)} src={props.src} />
       {props.tag && <div className={css(styles.imageTag)}>{props.tag}</div>}
     </div>
   );

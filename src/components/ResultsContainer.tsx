@@ -48,6 +48,11 @@ export class ResultsContainer extends React.Component<Props & DispatchProps> {
               <Link link={this.props.updateSearchTerm}>{r.name}</Link>
             </div>
           ))}
+        {this.props.displayedResults.length === 0 && (
+          <div>
+            Hm&hellip; not finding anything for "{this.props.searchTerm}", sorry
+          </div>
+        )}
       </div>
     );
   }

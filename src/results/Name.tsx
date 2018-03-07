@@ -1,12 +1,17 @@
 import * as React from 'react';
+import { Link, LinkProps } from './Link';
 
-const Comp: React.SFC = () => {
-  return <div>Luke</div>;
+const Comp: React.SFC<LinkProps> = props => {
+  return (
+    <div>
+      <Link {...props}>Luke</Link>
+    </div>
+  );
 };
 
 const CompResult = {
   names: ['name'],
-  component: () => <Comp />,
+  component: (props: LinkProps) => <Comp {...props} />,
 };
 
 export default CompResult;

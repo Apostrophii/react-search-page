@@ -46,7 +46,7 @@ const Comp: React.SFC<LinkProps> = props => {
 };
 
 const CompResult = {
-  names: ['luke', 'luke travis', 'this guy'],
+  names: ['luke', 'luke travis', 'luke george muller travis', 'this guy'],
   component: (props: LinkProps) => <Comp {...props} />,
 };
 

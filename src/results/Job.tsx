@@ -36,8 +36,9 @@ const CompResult = {
     'employment',
     'livelihood',
     'current employment',
-    'current work',
+    'current job',
     'place of work',
+    'k3',
   ],
   component: (props: LinkProps) => <Comp {...props} />,
 };

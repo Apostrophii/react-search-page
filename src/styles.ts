@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
       borderColor: '#089979',
     },
   },
-  image: {
+  imageGroup: {
     paddingLeft: '12px',
     borderLeft: '8px solid #089979',
     lineHeight: 0,
@@ -38,8 +38,10 @@ export const styles = StyleSheet.create({
     lineHeight: 'initial',
     fontSize: '14px',
     color: '#505050',
+    paddingTop: '4px',
   },
-  fullWidthMax: {
+  image: {
     maxWidth: '100%',
+    maxHeight: '500px',
   },
 });
