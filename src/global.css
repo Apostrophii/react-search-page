@@ -40,3 +40,7 @@ a:hover {
 ul {
   margin: 0;
 }
+
+img {
+  background-color: rgba(8, 153, 121, 0.5);
+}
