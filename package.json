@@ -11,30 +11,21 @@
     "develop": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html --public-url '/'",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "push": "scp ./dist/* root@luketravis.io:/www/data"
   },
   "jest": {
     "setupFiles": [
       "<rootDir>/config/test-shim.js",
       "<rootDir>/config/test-setup.js"
     ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js"],
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/config/test-preprocessor.js"
     },
-    "testMatch": [
-      "**/__tests__/*.(test|spec).(ts|tsx|js)"
-    ]
+    "testMatch": ["**/__tests__/*.(test|spec).(ts|tsx|js)"]
   },
-  "keywords": [
-    "Typescript",
-    "React",
-    "Parcel"
-  ],
+  "keywords": ["Typescript", "React", "Parcel"],
   "author": "Ahn Dohyung",
   "license": "MIT",
   "dependencies": {
