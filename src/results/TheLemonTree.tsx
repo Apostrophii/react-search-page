@@ -9,7 +9,7 @@ const theLemonTreeJpg = require('../images/the-lemon-tree.jpg');
 const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
-      <Image src={theLemonTreeJpg} />
+      <Image src={theLemonTreeJpg} vertical={true} />
       <div className={css(styles.paragraph, styles.essay)}>
         I came across this book when searching for something to help educate
         myself on Israeli-Palistinian relations and the history behind their

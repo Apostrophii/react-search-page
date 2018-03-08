@@ -5,6 +5,7 @@ import { Link, LinkProps } from './Link';
 import { Image } from './Image';
 
 const classroomJpg = require('../images/classroom.jpg');
+const classroomSmallJpg = require('../images/classroom.small.jpg');
 const tokyoSprawlJpg = require('../images/tokyo-sprawl.jpg');
 const alleyJpg = require('../images/alley.jpg');
 const shibuyaJpg = require('../images/shibuya.jpg');
@@ -26,7 +27,11 @@ const Comp: React.SFC<LinkProps> = props => {
         language. I finally got my chance to go as I was wrapping up my last
         year of college.
       </div>
-      <Image src={classroomJpg} tag="One of the classrooms where I studied" />
+      <Image
+        src={classroomJpg}
+        placeholder={classroomSmallJpg}
+        tag="One of the classrooms where I studied"
+      />
       <Image src={tokyoSprawlJpg} tag="Sprawling, endless Tokyo" />
       <div className={css(styles.paragraph)}>
         It was a fantastic experience. I cannot recommend enough how much you

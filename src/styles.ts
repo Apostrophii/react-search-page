@@ -34,14 +34,22 @@ export const styles = StyleSheet.create({
     borderLeft: '8px solid #089979',
     lineHeight: 0,
   },
+  imageContainer: {
+    overflow: 'hidden',
+  },
   imageTag: {
     lineHeight: 'initial',
     fontSize: '14px',
     color: '#505050',
     paddingTop: '4px',
   },
-  image: {
-    maxWidth: '100%',
-    maxHeight: '500px',
+  horizontalImage: {
+    width: '100%',
+  },
+  verticalImage: {
+    height: '450px',
+  },
+  placeholderImage: {
+    filter: 'blur(4px)',
   },
 });

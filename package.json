@@ -19,13 +19,23 @@
       "<rootDir>/config/test-shim.js",
       "<rootDir>/config/test-setup.js"
     ],
-    "moduleFileExtensions": ["ts", "tsx", "js"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/config/test-preprocessor.js"
     },
-    "testMatch": ["**/__tests__/*.(test|spec).(ts|tsx|js)"]
+    "testMatch": [
+      "**/__tests__/*.(test|spec).(ts|tsx|js)"
+    ]
   },
-  "keywords": ["Typescript", "React", "Parcel"],
+  "keywords": [
+    "Typescript",
+    "React",
+    "Parcel"
+  ],
   "author": "Ahn Dohyung",
   "license": "MIT",
   "dependencies": {
@@ -39,6 +49,7 @@
     "fast-levenshtein": "^2.0.6",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-progressive-image": "^0.3.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2"
