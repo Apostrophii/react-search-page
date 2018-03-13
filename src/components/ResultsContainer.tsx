@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
   },
   fadeIn: {
     animationName: [fadeInAnimation],
-    animationDuration: '1.2s',
+    animationDelay: '0.1s',
+    animationDuration: '1.4s',
     animationFillMode: 'forwards',
   },
 });

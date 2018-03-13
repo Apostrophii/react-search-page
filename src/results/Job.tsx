@@ -37,6 +37,7 @@ const CompResult = {
     'livelihood',
     'current employment',
     'current job',
+    'current work',
     'place of work',
     'k3',
   ],

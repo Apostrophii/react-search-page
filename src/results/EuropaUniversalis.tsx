@@ -3,6 +3,8 @@ import { css } from 'aphrodite';
 import { styles } from '../styles';
 import { Link, LinkProps } from './Link';
 
+// TODO: Get correct amazon link
+
 const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>

@@ -4,7 +4,10 @@ body {
   /* font-family: 'Barlow Semi Condensed', sans-serif; */
   font-family: 'Assistant', sans-serif;
 
-  background-color: #eff1f0;
+  animation-name: fadein;
+  animation-duration: 1s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
 
   /* background-color: rgb(32, 32, 32);
   background-image: linear-gradient(
@@ -43,4 +46,14 @@ ul {
 
 img {
   background-color: rgba(8, 153, 121, 0.5);
+}
+
+@keyframes fadein {
+  from {
+    background-color: #eff1f0;
+  }
+
+  to {
+    background-color: #089979;
+  }
 }

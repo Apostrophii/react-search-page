@@ -24,8 +24,10 @@ export default App;
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    margin: '40px 0',
+    padding: '40px 0',
     justifyContent: 'center',
+    backgroundColor: '#eff1f0',
+    minHeight: 'calc(100vh - 80px)',
   },
   column: {
     width: '90vw',

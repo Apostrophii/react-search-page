@@ -9,6 +9,7 @@ export const Image: React.SFC<{
   width: number;
   height: number;
   tag?: string;
+  vertical?: boolean;
 }> = props => {
   return (
     <div className={css(styles.imageGroup, styles.paragraph)}>
@@ -19,9 +20,11 @@ export const Image: React.SFC<{
           style={{
             backgroundSize: 'contain',
             backgroundRepeat: 'no-repeat',
-            width: '100%', // TODO: Check vertical images & small images
-            height: '0',
-            paddingTop: `${props.height / props.width * 100}%`,
+            width: props.vertical ? undefined : '100%',
+            height: props.vertical ? props.height : '0',
+            paddingTop: props.vertical
+              ? undefined
+              : `${props.height / props.width * 100}%`,
           }}
         />
       </div>

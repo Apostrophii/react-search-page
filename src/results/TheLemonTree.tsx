@@ -16,6 +16,7 @@ const Comp: React.SFC<LinkProps> = props => {
         base64={theLemonTreeBase64}
         width={256}
         height={400}
+        vertical={true}
       />
       <div className={css(styles.paragraph, styles.essay)}>
         I came across this book when searching for something to help educate

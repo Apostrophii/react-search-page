@@ -29,7 +29,7 @@ const Comp: React.SFC<LinkProps> = props => {
           <Link {...props} term="education">
             WWU
           </Link>{' '}
-          CS Lab (201-2016)
+          CS Lab (2015-2016)
         </div>
         <div className={css(styles.essay)}>
           As head system admin I was largely involved overseeing a transitional

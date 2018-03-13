@@ -45,8 +45,8 @@ export const Input: React.SFC<Props & DispatchProps> = ({
     container: {
       position: 'relative',
       overflow: 'hidden',
-      animationName: [lowerAnimation],
-      animationDuration: '1s',
+      // animationName: [lowerAnimation],
+      // animationDuration: '1s',
     },
     input: {
       width: '100%',
