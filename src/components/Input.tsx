@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Action } from 'redux';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css } from 'aphrodite/no-important';
 import { UpdateSearchTermAction, UpdateInputAnimationAction } from '../actions';
 
 export interface Props {

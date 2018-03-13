@@ -3,8 +3,12 @@ import { css } from 'aphrodite';
 import { styles } from '../styles';
 import { Image } from './Image';
 
-const awrStatsFullPng = require('../images/awr-stats-full.png');
-const awrStatsFocus = require('../images/awr-stats-focus.png');
+const awrStatsFullImage = require('../images/awr-stats-full.1000x623.png');
+const awrStatsFullBase64 = require('../base64-images/awr-stats-full.ts')
+  .default;
+const awrStatsFocusImage = require('../images/awr-stats-focus.1000x624.png');
+const awrStatsFocusBase64 = require('../base64-images/awr-stats-focus.ts')
+  .default;
 
 const Comp: React.SFC = () => {
   return (
@@ -15,8 +19,18 @@ const Comp: React.SFC = () => {
         or other criteria. My role in this project was working to code the site
         in Angular 1.5 (I joined as my team was upgrading from Angular 1).
       </div>
-      <Image src={awrStatsFullPng} />
-      <Image src={awrStatsFocus} />
+      <Image
+        src={awrStatsFullImage}
+        base64={awrStatsFullBase64}
+        width={1000}
+        height={623}
+      />
+      <Image
+        src={awrStatsFocusImage}
+        base64={awrStatsFocusBase64}
+        width={1000}
+        height={624}
+      />
     </div>
   );
 };

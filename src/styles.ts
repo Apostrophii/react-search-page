@@ -43,12 +43,12 @@ export const styles = StyleSheet.create({
     color: '#505050',
     paddingTop: '4px',
   },
-  horizontalImage: {
-    width: '100%',
-  },
-  verticalImage: {
-    height: '450px',
-  },
+  // horizontalImage: {
+  //   width: '100%',
+  // },
+  // verticalImage: {
+  //   height: '450px',
+  // },
   placeholderImage: {
     filter: 'blur(4px)',
   },

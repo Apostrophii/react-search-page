@@ -4,12 +4,19 @@ import { styles } from '../styles';
 import { Link, LinkProps } from './Link';
 import { Image } from './Image';
 
-const theLemonTreeJpg = require('../images/the-lemon-tree.jpg');
+const theLemonTreeImage = require('../images/the-lemon-tree.265x400.jpg');
+const theLemonTreeBase64 = require('../base64-images/the-lemon-tree.ts')
+  .default;
 
 const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
-      <Image src={theLemonTreeJpg} vertical={true} />
+      <Image
+        src={theLemonTreeImage}
+        base64={theLemonTreeBase64}
+        width={256}
+        height={400}
+      />
       <div className={css(styles.paragraph, styles.essay)}>
         I came across this book when searching for something to help educate
         myself on Israeli-Palistinian relations and the history behind their

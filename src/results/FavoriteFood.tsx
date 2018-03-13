@@ -4,14 +4,18 @@ import { styles } from '../styles';
 import { Link, LinkProps } from './Link';
 import { Image } from './Image';
 
-const okonomiyakiJpg = require('../images/okonomiyaki.jpg');
+const okonomiyakiImage = require('../images/okonomiyaki.600x450.jpg');
+const okonomiyakiBase64 = require('../base64-images/okonomiyaki.ts').default;
 
 const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
       <div className={css(styles.paragraph)}>Okonomiyaki!</div>
       <Image
-        src={okonomiyakiJpg}
+        src={okonomiyakiImage}
+        base64={okonomiyakiBase64}
+        width={600}
+        height={450}
         tag="Image courtesy of ohtakemama of tabelog.com"
       />
       <div className={css(styles.paragraph)}>

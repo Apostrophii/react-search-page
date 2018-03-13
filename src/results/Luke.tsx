@@ -4,7 +4,8 @@ import { styles } from '../styles';
 import { Link, LinkProps } from './Link';
 import { Image } from './Image';
 
-const museumLukeJpg = require('../images/museum-luke.jpg');
+const museumLukeImage = require('../images/museum-luke.640x480.jpg');
+const museumLukeBase64 = require('../base64-images/museum-luke.ts').default;
 
 const Comp: React.SFC<LinkProps> = props => {
   return (
@@ -40,7 +41,12 @@ const Comp: React.SFC<LinkProps> = props => {
           </li>
         </ul>
       </div>
-      <Image src={museumLukeJpg} />
+      <Image
+        src={museumLukeImage}
+        base64={museumLukeBase64}
+        width={640}
+        height={480}
+      />
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css } from 'aphrodite/no-important';
 import { UpdateSearchTermAction, UpdateLastHitAction } from '../actions';
 import { styles as appStyles } from '../styles';
 import { Link, LinkProps } from '../results/Link';
