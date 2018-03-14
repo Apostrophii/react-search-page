@@ -55,7 +55,7 @@ const Comp: React.SFC<LinkProps> = props => {
         src={stHelensCoupleImage}
         base64={stHelensCoupleBase64}
         width={1000}
-        height={750}
+        height={563}
         tag="All in all, we had a great climb : )"
       />
     </div>
@@ -63,7 +63,7 @@ const Comp: React.SFC<LinkProps> = props => {
 };
 
 const CompResult = {
-  names: ['climbing mount st helens', 'mount st helens'],
+  names: ['climbing mount st helens', 'mount st helens', 'mt st helens'],
   component: (props: LinkProps) => <Comp {...props} />,
 };
 
