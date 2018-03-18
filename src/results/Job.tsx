@@ -15,7 +15,7 @@ const Comp: React.SFC<LinkProps> = props => {
       <div className={css(styles.paragraph)}>
         We started out as a contract company but, seeing a need that no one had
         yet tackled, we've also been developing{' '}
-        <Link {...props} term="swivel">
+        <Link {...props} term="hubbub">
           a solution for distributed teams
         </Link>{' '}
         to work together naturally in an online environment.

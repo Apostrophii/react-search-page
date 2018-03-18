@@ -87,3 +87,5 @@ const styles = StyleSheet.create({
     animationFillMode: 'forwards',
   },
 });
+
+// TODO: Display results better possibly adding arrow/enter navigation

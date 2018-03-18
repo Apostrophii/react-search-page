@@ -8,14 +8,14 @@ const Comp: React.SFC<LinkProps> = props => {
     <div>
       <div className={css(styles.paragraph)}>
         <div>
-          <b>Web App Developer</b>, <Link {...props}>K3</Link> (2016-present)
+          <b>Web App Developer</b>, <Link {...props}>K3</Link> (2+ years)
         </div>
         <div className={css(styles.essay)}>
           At K3 I started out learning and then mastering the Angular 2
           framework, which they had begun using almost as soon as it was
           released (my first K3 project was an Angular 1.5 project). Once we
           decided to build our first in-house product,{' '}
-          <Link {...props}>Swivel</Link>, I began making mockups in my spare
+          <Link {...props}>Hubbub</Link>, I began making mockups in my spare
           time and as a result was one of the first to be switched over to
           working on it full time. I've since gotten quite a bit of experience
           being on the frontlines of the design process (in addition to
@@ -29,7 +29,7 @@ const Comp: React.SFC<LinkProps> = props => {
           <Link {...props} term="education">
             WWU
           </Link>{' '}
-          CS Lab (2015-2016)
+          CS Lab (1 year)
         </div>
         <div className={css(styles.essay)}>
           As head system admin I was largely involved overseeing a transitional
@@ -45,7 +45,7 @@ const Comp: React.SFC<LinkProps> = props => {
           <Link {...props} term="education">
             WWU
           </Link>{' '}
-          CS Lab (2013-2015)
+          CS Lab (2 years)
         </div>
         <div className={css(styles.essay)}>
           My work as a system admin consisted of mostly scripting work as well
@@ -59,7 +59,7 @@ const Comp: React.SFC<LinkProps> = props => {
           <Link {...props} term="education">
             WWU
           </Link>{' '}
-          (2015)
+          (3 months)
         </div>
       </div>
       <div className={css(styles.paragraph)}>
@@ -68,12 +68,12 @@ const Comp: React.SFC<LinkProps> = props => {
           <Link {...props} term="education">
             MBA
           </Link>{' '}
-          (2011-2014)
+          (2 years)
         </div>
       </div>
       <div className={css(styles.paragraph)}>
         <div>
-          <b>Janitor</b>, Rainbow Fin Co. (2013-2014)
+          <b>Janitor</b>, Rainbow Fin Co. (1 year)
         </div>
       </div>
     </div>
@@ -91,5 +91,3 @@ const CompResult = {
 };
 
 export default CompResult;
-
-// TODO: Check dates

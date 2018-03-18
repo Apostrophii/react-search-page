@@ -17,5 +17,3 @@ const CompResult = {
 };
 
 export default CompResult;
-
-// TODO: Replace this with a picture of my eye

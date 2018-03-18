@@ -18,7 +18,7 @@ const Comp: React.SFC<LinkProps> = props => {
         Things I've been up to lately:
         <ul>
           <li>
-            Fixing bugs in <Link {...props}>Swivel</Link>
+            Fixing bugs in <Link {...props}>Hubbub</Link>
           </li>
           <li>
             Reading{' '}

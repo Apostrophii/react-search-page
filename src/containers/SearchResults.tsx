@@ -43,17 +43,19 @@ class SearchResults extends React.Component<AllProps> {
     const hit = nextProps.displayedResults.find(
       r => r.name === nextProps.searchTerm,
     );
-    if (!hit) {
-      return;
+    if (hit) {
+      this.props.updateLastHit(hit.name);
+      if (
+        this.toTerm(nextProps.history.location.pathname) !== hit.name &&
+        this.props.searchTerm !== hit.name
+      ) {
+        nextProps.history.push(this.toPath(nextProps.searchTerm));
+      }
     }
 
-    this.props.updateLastHit(hit.name);
-
-    if (
-      this.toTerm(nextProps.history.location.pathname) !== hit.name &&
-      this.props.searchTerm !== hit.name
-    ) {
-      nextProps.history.push(this.toPath(nextProps.searchTerm));
+    // Scroll to top if displayedResults changes
+    if (nextProps.lastHit !== this.props.lastHit) {
+      window.scrollTo(0, 0);
     }
   }
 

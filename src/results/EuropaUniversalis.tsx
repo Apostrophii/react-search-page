@@ -3,8 +3,6 @@ import { css } from 'aphrodite';
 import { styles } from '../styles';
 import { Link, LinkProps } from './Link';
 
-// TODO: Get correct amazon link
-
 const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
@@ -24,7 +22,7 @@ const Comp: React.SFC<LinkProps> = props => {
         And it's undoubtably fun to try bringing the Byzantine Empire back from
         the ashes of a sacked Constantinople. Here it is on{' '}
         <a
-          href="https://www.amazon.com/Lemon-Tree-Arab-Heart-Middle/dp/1582343438"
+          href="http://store.steampowered.com/app/236850/Europa_Universalis_IV/"
           target="_blank"
         >
           &lt;Steam&gt;

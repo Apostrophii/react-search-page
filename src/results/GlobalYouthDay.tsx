@@ -3,8 +3,6 @@ import { css } from 'aphrodite';
 import { styles } from '../styles';
 import { Image } from './Image';
 
-// TODO: See if you can find an image
-
 const Comp: React.SFC = () => {
   return (
     <div>
@@ -14,7 +12,12 @@ const Comp: React.SFC = () => {
         involved migrating the project to native apps and oversaw the
         localization effort.
       </div>
-      {/* <Image src="https://lh3.ggpht.com/t5qyauizrq9oUGH_cbVzZlCiKSCnFNLCWIGj90ZOTUg9RAyjLD1U3lz_CXn_jQhinw=h900-rw" /> */}
+      <Image
+        src="https://lh3.ggpht.com/t5qyauizrq9oUGH_cbVzZlCiKSCnFNLCWIGj90ZOTUg9RAyjLD1U3lz_CXn_jQhinw=h900-rw"
+        base64="https://lh3.ggpht.com/t5qyauizrq9oUGH_cbVzZlCiKSCnFNLCWIGj90ZOTUg9RAyjLD1U3lz_CXn_jQhinw=h900-rw"
+        width={1280}
+        height={800}
+      />
     </div>
   );
 };

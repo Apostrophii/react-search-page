@@ -9,7 +9,7 @@ const Comp: React.SFC<LinkProps> = props => {
       <div className={css(styles.paragraph)}>Professional projects</div>
       <div>
         <b>
-          <Link {...props}>Swivel</Link>
+          <Link {...props}>Hubbub</Link>
         </b>{' '}
         (developed for K3)
       </div>
