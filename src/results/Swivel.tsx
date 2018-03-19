@@ -11,12 +11,12 @@ const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
       <div className={css(styles.paragraph)}>
-        Hubbub is a remote presence application for distributed teams. It's
+        Hubbub is a remote presence application for distributed teams. It’s
         designed to make calls, meetings, pairing, and anything in between
-        simple and easy when not everyone's in the same room.
+        simple and easy when not everyone’s in the same room.
       </div>
       {/* <div className={css(styles.paragraph)}>
-        Feel free to give it a go and see what your team's been missing at{' '}
+        Feel free to give it a go and see what your team’s been missing at{' '}
         <a href="swivel.is" target="_blank">
           &lt;Swivel.is&gt;
         </a>

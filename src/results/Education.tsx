@@ -15,8 +15,8 @@ const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
       <div className={css(styles.paragraph)}>
-        My most recent stint of schoolastic endevors was in{' '}
-        <Link {...props}>Japan</Link>, studing Japanese for half a year at a
+        My most recent stint of scholastic endeavors was in{' '}
+        <Link {...props}>Japan</Link>, studying Japanese for half a year at a
         language school (KPC International) in Shinjuku, Tokyo.
       </div>
       <Image
@@ -24,21 +24,21 @@ const Comp: React.SFC<LinkProps> = props => {
         base64={kcpBase64}
         width={500}
         height={323}
-        tag="Image courtasy of gooverseas.com, I didn't think to take a picture of the school front while I was there : ("
+        tag="Image courtesy of gooverseas.com, I didn’t think to take a picture of the school front while I was there : ("
       />
       <div className={css(styles.paragraph)}>
         For the 3 years before that I was studying Computer Science and earning
-        my bachelor's at Walla Walla University.
+        my bachelor’s at Walla Walla University.
       </div>
       <Image
         src={wwuImage}
         base64={wwuBase64}
         width={800}
         height={346}
-        tag="Image courtasy of wallawalla.edu"
+        tag="Image courtesy of wallawalla.edu"
       />
       <div className={css(styles.paragraph)}>
-        Go back even further and you'll find me at Monteray Bay Academy, a
+        Go back even further and you’ll find me at Monterey Bay Academy, a
         school right on the beach of central California.
       </div>
       <Image
@@ -46,7 +46,7 @@ const Comp: React.SFC<LinkProps> = props => {
         base64={mbaBase64}
         width={1336}
         height={458}
-        tag="Image courtasy of montereybayacademy.org"
+        tag="Image courtesy of montereybayacademy.org"
       />
       <div className={css(styles.paragraph)}>
         And I suppose for completeness I should include that I went to grade

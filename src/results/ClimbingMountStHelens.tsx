@@ -49,7 +49,7 @@ const Comp: React.SFC<LinkProps> = props => {
         base64={stHelensSideBase64}
         width={1000}
         height={563}
-        tag="Apparently this is one of the world's newest glaciers, it's been forming ever since the 1980 eruption"
+        tag="Apparently this is one of the world’s newest glaciers, it’s been forming ever since the 1980 eruption"
       />
       <Image
         src={stHelensCoupleImage}

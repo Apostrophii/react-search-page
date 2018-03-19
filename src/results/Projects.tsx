@@ -53,12 +53,12 @@ const Comp: React.SFC<LinkProps> = props => {
         </b>
       </div>
       <div className={css(styles.paragraph, styles.essay)}>
-        This very site you're on!
-        {/* I figure there's no better way to learn something than by giving it a
+        This very site you’re on!
+        {/* I figure there’s no better way to learn something than by giving it a
         spin so I created this site as a way for me to become experienced with
-        React/Redux and add another tool to my box. All in all I'd say it's
+        React/Redux and add another tool to my box. All in all I’d say it’s
         going pretty smoothly. Redux has certainly taken some time to wrap my
-        mind around but I'm loving how much structure and orderliness it's
+        mind around but I’m loving how much structure and orderliness it’s
         imposed. */}
       </div>
       <div>
@@ -67,7 +67,7 @@ const Comp: React.SFC<LinkProps> = props => {
         </b>
       </div>
       <div className={css(styles.paragraph, styles.essay)}>
-        A ring with a bit more dimentionality to it
+        A ring with a bit more dimensionality to it
       </div>
       <div>
         <b>

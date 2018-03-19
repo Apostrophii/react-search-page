@@ -14,7 +14,7 @@ const Comp: React.SFC = () => {
   return (
     <div>
       <div className={css(styles.paragraph, styles.essay)}>
-        Adventist Giving is an online donation platform for the North America
+        Adventist Giving is an online donation platform for the North American
         Division of the Seventh-day Adventist Church.
       </div>
       <Image
@@ -26,7 +26,7 @@ const Comp: React.SFC = () => {
       <div className={css(styles.paragraph, styles.essay)}>
         I was involved throughout the duration of the project, both front end
         and back end, from sorting out the specs with the client to seeing it to
-        completion. My main challenge was masting Angular 2 and writing tests
+        completion. My main challenge was mastering Angular 2 and writing tests
         for it. As this project was heavily involved with money, making sure it
         was as error-free was crucial.
       </div>

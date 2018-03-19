@@ -34,7 +34,7 @@ const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
       <div className={css(styles.paragraph, styles.essay)}>
-        Ever since I started teaching myself Japanese I'd wanted to someday
+        Ever since I started teaching myself Japanese I’d wanted to someday
         travel to Japan for a chance to immersively learn and practice the
         language. I finally got my chance to go as I was wrapping up my last
         year of college.
@@ -64,7 +64,7 @@ const Comp: React.SFC<LinkProps> = props => {
         It was a fantastic experience. I cannot recommend enough how much you
         can learn about a culture by living in it for more than just a week or
         two of vacation. Little things like grabbing onigiri at the combini
-        right as it goes on sale can be as enjoyable as stubling upon a shrine
+        right as it goes on sale can be as enjoyable as stumbling upon a shrine
         in the back alleys of a new neighborhood.
       </div>
       <Image
@@ -76,9 +76,9 @@ const Comp: React.SFC<LinkProps> = props => {
       />
       <div className={css(styles.paragraph, styles.essay)}>
         Especially in a city like Tokyo, which seems to go on and on past the
-        horizon, there's always something new to see, somewhere new to go. You
-        definitely don't get bored. Getting sick of seeing so many people is
-        certainly a thing though. I'd never appreciated before how much privacy
+        horizon, there’s always something new to see, somewhere new to go. You
+        definitely don’t get bored. Getting sick of seeing so many people is
+        certainly a thing though. I’d never appreciated before how much privacy
         living in America affords just by virtue of being to (comparatively)
         sparsely populated.
       </div>
@@ -92,7 +92,7 @@ const Comp: React.SFC<LinkProps> = props => {
       <div className={css(styles.paragraph, styles.essay)}>
         My favorite part of the experience was the second half of my stay when I
         had the opportunity to live with a host family in Tokorozawa, Saitama.
-        They were a lovely couple with grandkids and took excelent care of me,
+        They were a lovely couple with grandkids and took excellent care of me,
         going out of their way to give me experiences like imohori (a fall
         tradition of digging for sweet potatoes, kind of like picking pumpkins
         here in the US) and traveling outside the sprawling Tokyo metro to see
@@ -105,17 +105,17 @@ const Comp: React.SFC<LinkProps> = props => {
         base64={imohoriBase64}
         width={1000}
         height={563}
-        tag="That's my host dad (grandpa) in the red plaid"
+        tag="That’s my host dad (grandpa) in the red plaid"
       />
       <div className={css(styles.paragraph, styles.essay)}>
         I also got to do some traveling during the few breaks and holidays the
         school had. On one of them Larissa (not yet my wife) flew out and we had
         a great time climbing Mt Fuji through the night to see the sunrise
-        (which was amazing to see when you're standing on an island in the
+        (which was amazing to see when you’re standing on an island in the
         clouds) and taking the shinkansen (bullet train) down to Nara, one of
         the old capitals of Japan (where they have sacred dear who can, and
         will, wander around anywhere). My mom came out to see me (and an old
-        friend of her's) aswell and we went down to see all of the temples and
+        friend of hers) as well and we went down to see all of the temples and
         shrines in Kyoto which was beautiful.
       </div>
       <Image
@@ -123,7 +123,7 @@ const Comp: React.SFC<LinkProps> = props => {
         base64={climbingFujiBase64}
         width={1000}
         height={563}
-        tag="We've almost reached the summit just as the sky is starting to lighten"
+        tag="We’ve almost reached the summit just as the sky is starting to lighten"
       />
       <Image
         src={fujiSummitShadowImage}
@@ -137,7 +137,7 @@ const Comp: React.SFC<LinkProps> = props => {
         base64={manyDeerBase64}
         width={1000}
         height={563}
-        tag="Nara deer! They love being fed crackers (and there are signs warning of how enthusiastically they'll try to get them from you)"
+        tag="Nara deer! They love being fed crackers (and there are signs warning of how enthusiastically they’ll try to get them from you)"
       />
       <Image
         src={ginkakujiImage}
@@ -158,7 +158,7 @@ const Comp: React.SFC<LinkProps> = props => {
         base64={giantBuddhaBase64}
         width={1000}
         height={563}
-        tag="I've probably seen enough buddhas to last a lifetime by now"
+        tag="I’ve probably seen enough buddhas to last a lifetime by now"
       />
       <Image
         src={fixingArchImage}

@@ -10,7 +10,7 @@ const Comp: React.SFC<LinkProps> = props => {
         <div className={css(styles.bold)}>
           <Link {...props}>LUKE TRAVIS</Link>
         </div>
-        (code + design)
+        [code + design]
       </li>
       <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>
@@ -18,7 +18,7 @@ const Comp: React.SFC<LinkProps> = props => {
             EXPERIENCED
           </Link>
         </div>
-        with JS, Typescript, Angular 2, React, Node, Python, Git, Bash, and
+        with React, Angular 2, Rails, Webpack, Python, TypeScript, Bash, Git and
         others
       </li>
       <li className={css(styles.bulletPoint, styles.paragraph)}>
@@ -28,7 +28,7 @@ const Comp: React.SFC<LinkProps> = props => {
           </Link>
         </div>
         currently at <Link {...props}>K3</Link> (a web app development firm) for
-        +2 years and has been working in tech related positions for 6 years
+        2+ years, and has been working in tech related positions for 5+ years
       </li>
       <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>
@@ -36,7 +36,7 @@ const Comp: React.SFC<LinkProps> = props => {
             GRADUATED
           </Link>
         </div>
-        with a BS in Computer Science from Walla Walla Univeristy
+        with a BS in Computer Science from Walla Walla University
       </li>
       <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>
@@ -46,7 +46,7 @@ const Comp: React.SFC<LinkProps> = props => {
       </li>
       <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>CONTACT</div>
-        at me@luketravis.io
+        me at <a href="mailto:luke@luketravis.io">luke@luketravis.io</a>
       </li>
     </ul>
   );

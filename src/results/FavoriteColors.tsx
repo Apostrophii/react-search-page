@@ -4,7 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 const Comp: React.SFC = () => {
   return (
     <div>
-      I actually don't have a favorite color, but my favorite color combination
+      I actually don’t have a favorite color, but my favorite color combination
       is <span className={css(styles.black)}>black</span> and{' '}
       <span className={css(styles.green)}>green</span>
     </div>

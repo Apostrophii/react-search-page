@@ -8,7 +8,7 @@ const Comp: React.SFC = () => {
     <div>
       <div className={css(styles.paragraph, styles.essay)}>
         Global Youth Day is a mobile app comissioned to facilitate its titular
-        annual event. While I wasn't involved in its initial creation, I was
+        annual event. While I wasn’t involved in its initial creation, I was
         involved migrating the project to native apps and oversaw the
         localization effort.
       </div>

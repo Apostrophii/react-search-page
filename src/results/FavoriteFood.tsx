@@ -20,10 +20,10 @@ const Comp: React.SFC<LinkProps> = props => {
       />
       <div className={css(styles.paragraph)}>
         Sometimes described as a japanese pizza, okonomiyaki is a delicious,
-        savory street food that's like a fried crepe topped with egg, cabbage,
+        savory street food that’s like a fried crepe topped with egg, cabbage,
         noodles, meat (for those so inclined), sauce, and Japanese mayo. Some
-        resturaunts are even set up for you to be able to fry it yourself at
-        your table which is pretty fun. Sadly though, it's pretty hard to come
+        restaurants are even set up for you to be able to fry it yourself at
+        your table which is pretty fun. Sadly though, it’s pretty hard to come
         by here in the States.
       </div>
     </div>

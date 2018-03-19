@@ -3,7 +3,7 @@ import * as React from 'react';
 const Comp: React.SFC = () => {
   return (
     <div>
-      Sorry, can't just be giving this out to <i>anyone</i> on the internet haha
+      Sorry, can’t just be giving this out to <i>anyone</i> on the internet haha
     </div>
   );
 };

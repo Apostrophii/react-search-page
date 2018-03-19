@@ -11,12 +11,12 @@ const Comp: React.SFC<LinkProps> = props => {
           This site is <Link {...props}>Luke Travis</Link>' search page
         </div>
         <div className={css(styles.aside)}>
-          (And he's pretty stoked you're here!)
+          (And he’s pretty stoked you’re here!)
         </div>
       </div>
       <div>
         Feel free to check out some of my <Link {...props}>projects</Link>, see
-        where I'm{' '}
+        where I’m{' '}
         <Link {...props} term="current work">
           currently working
         </Link>, find out if we have the same{' '}

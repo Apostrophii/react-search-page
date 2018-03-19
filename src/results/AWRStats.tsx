@@ -13,7 +13,7 @@ const awrStatsFocusBase64 = require('../base64-images/awr-stats-focus.ts')
 const Comp: React.SFC = () => {
   return (
     <div>
-      <div className={css(styles.paragraph)}>
+      <div className={css(styles.paragraph, styles.essay)}>
         AWR Stats is a site created for Adventist World Radio to help them track
         the consumption of their programs based on region, language, platform,
         or other criteria. My role in this project was working to code the site

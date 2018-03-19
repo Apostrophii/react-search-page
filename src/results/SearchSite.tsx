@@ -10,7 +10,7 @@ const Comp: React.SFC = () => {
         I created this site as a personal exercise to improve my experience with
         React and Redux. I was also interested in trying out a new format for my
         personal site and thus the search layout. (Let me know if you have any
-        feedback, especially if it's constructive criticism.)
+        feedback, especially if it’s constructive criticism.)
       </div>
     </div>
   );

@@ -11,11 +11,11 @@ const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
       <div className={css(styles.paragraph)}>
-        I'm a developer and designer who lives in the Portland area and enjoys a
+        I’m a developer and designer who lives in the Portland area and enjoys a
         good hike.
       </div>
       <div className={css(styles.paragraph)}>
-        Things I've been up to lately:
+        Things I’ve been up to lately:
         <ul>
           <li>
             Fixing bugs in <Link {...props}>Hubbub</Link>

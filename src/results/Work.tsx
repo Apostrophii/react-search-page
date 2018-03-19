@@ -17,7 +17,7 @@ const Comp: React.SFC<LinkProps> = props => {
           decided to build our first in-house product,{' '}
           <Link {...props}>Hubbub</Link>, I began making mockups in my spare
           time and as a result was one of the first to be switched over to
-          working on it full time. I've since gotten quite a bit of experience
+          working on it full time. I’ve since gotten quite a bit of experience
           being on the frontlines of the design process (in addition to
           continuing to code and learning the ins and outs of Electron and Nwjs
           too).
