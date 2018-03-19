@@ -8,7 +8,7 @@ const Comp: React.SFC<LinkProps> = props => {
     <div>
       <div className={css(styles.paragraph)}>
         <div>
-          This site is <Link {...props}>Luke Travis</Link>' search page
+          This site is <Link {...props}>Luke Travis</Link>’ search page
         </div>
         <div className={css(styles.aside)}>
           (And he’s pretty stoked you’re here!)
