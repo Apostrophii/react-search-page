@@ -48,9 +48,14 @@ const Comp: React.SFC<LinkProps> = props => {
           CS Lab (2 years)
         </div>
         <div className={css(styles.essay)}>
-          My work as a system admin consisted of mostly scripting work as well
+          My work as a system admin consisted of mostly scripting work, as well
           as learning the lab configuration and how to use Puppet Master to keep
           all of our computers up to date and synced.
+        </div>
+      </div>
+      <div className={css(styles.paragraph)}>
+        <div>
+          <b>Lead Artist</b>, Warvene Games (3 months)
         </div>
       </div>
       <div className={css(styles.paragraph)}>
@@ -86,6 +91,7 @@ const CompResult = {
     'work experience',
     'previous work experience',
     'work history',
+    'jobs',
   ],
   component: (props: LinkProps) => <Comp {...props} />,
 };
