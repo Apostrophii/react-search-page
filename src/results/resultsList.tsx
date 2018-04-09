@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { UpdateSearchTermAction } from '../actions';
 import EyeColor from './EyeColor';
 import FullName from './FullName';
 import Name from './Name';
@@ -34,7 +35,7 @@ import SearchSite from './SearchSite';
 import UniverseRing from './UniverseRing';
 import NavalMineLamp from './NavalMineLamp';
 import StereoscopicVisualizer from './StereoscopicVisualizer';
-import { UpdateSearchTermAction } from '../actions';
+import Contact from './Contact';
 
 export interface LinkProps {
   link: (value: string) => UpdateSearchTermAction;
@@ -81,6 +82,7 @@ export const resultsList: ResultsList[] = [
   UniverseRing,
   NavalMineLamp,
   StereoscopicVisualizer,
+  Contact,
 ];
 
 export const defaultList: ResultsList[] = [
