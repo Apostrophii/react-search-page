@@ -1,8 +1,14 @@
 import { StyleSheet, css } from 'aphrodite';
 
 export const styles = StyleSheet.create({
+  largeParagraph: {
+    marginBottom: '55px',
+  },
   paragraph: {
     marginBottom: '30px',
+  },
+  halfParagraph: {
+    marginBottom: '15px',
   },
   essay: {
     fontSize: '20px',
