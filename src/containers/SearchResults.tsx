@@ -9,11 +9,7 @@ import {
 } from '../components/ResultsContainer';
 import { resultsList, defaultList } from '../results/resultsList';
 import { Dispatch } from 'redux';
-import {
-  updateSearchTerm,
-  UpdateSearchTermAction,
-  updateLastHit,
-} from '../actions';
+import { updateSearchTerm, updateLastHit } from '../actions';
 import { History, UnregisterCallback, LocationListener } from 'history';
 import DefaultResult from '../results/DefaultResult';
 

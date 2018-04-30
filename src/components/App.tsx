@@ -3,6 +3,7 @@ import { StyleSheet, css } from 'aphrodite';
 import { History } from 'history';
 import SearchField from '../containers/SearchField';
 import SearchResults from '../containers/SearchResults';
+import Footer from '../containers/Footer';
 
 interface OwnProps {
   history: History;
@@ -12,8 +13,13 @@ const App: React.SFC<OwnProps> = props => {
   return (
     <div className={css(styles.container)}>
       <div className={css(styles.column)}>
-        <SearchField {...props} />
-        <SearchResults {...props} />
+        <div>
+          <SearchField {...props} />
+          <SearchResults {...props} />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
     </div>
   );
@@ -30,6 +36,8 @@ const styles = StyleSheet.create({
     minHeight: 'calc(100vh - 80px)',
   },
   column: {
+    display: 'grid',
+    gridTemplateRows: '1fr auto',
     width: '90vw',
     maxWidth: '550px',
   },

@@ -3,6 +3,8 @@ import { css, StyleSheet } from 'aphrodite';
 import { styles } from '../styles';
 import { Link, LinkProps } from './Link';
 
+// TODO: Update this
+
 const Comp: React.SFC<LinkProps> = props => {
   return (
     <div>
