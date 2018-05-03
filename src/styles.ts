@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     cursor: 'pointer',
     color: 'black',
     borderBottom: '2px solid black',
-    paddingBottom: '2px',
+    paddingBottom: '1px',
     ':hover': {
       color: '#089979',
       borderColor: '#089979',

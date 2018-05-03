@@ -8,7 +8,7 @@ const Comp: React.SFC<LinkProps> = props => {
     <div>
       <div className={css(styles.paragraph)}>
         <div>
-          <b>Web App Developer</b>, <Link {...props}>K3</Link> (2+ years)
+          <b>Web App Developer</b>, <Link {...props}>K3</Link> (2.5 years)
         </div>
         <div className={css(styles.essay)}>
           At K3 I started out learning and then mastering the Angular 2
@@ -55,7 +55,12 @@ const Comp: React.SFC<LinkProps> = props => {
       </div>
       <div className={css(styles.paragraph)}>
         <div>
-          <b>Lead Artist</b>, Warvene Games (3 months)
+          <b>Intern</b>, Google (summer)
+        </div>
+      </div>
+      <div className={css(styles.paragraph)}>
+        <div>
+          <b>Lead Artist</b>, Warvene Games (summer)
         </div>
       </div>
       <div className={css(styles.paragraph)}>
@@ -64,7 +69,7 @@ const Comp: React.SFC<LinkProps> = props => {
           <Link {...props} term="education">
             WWU
           </Link>{' '}
-          (3 months)
+          (summer)
         </div>
       </div>
       <div className={css(styles.paragraph)}>

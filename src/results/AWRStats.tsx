@@ -16,8 +16,8 @@ const Comp: React.SFC = () => {
       <div className={css(styles.paragraph, styles.essay)}>
         AWR Stats is a site created for Adventist World Radio to help them track
         the consumption of their programs based on region, language, platform,
-        or other criteria. My role in this project was working to code the site
-        in Angular 1.5 (I joined as my team was upgrading from Angular 1).
+        and other criteria. My role in this project was working to code the site
+        in Angular 1.5 (I joined in as my team was upgrading from Angular 1).
       </div>
       <Image
         src={awrStatsFullImage}

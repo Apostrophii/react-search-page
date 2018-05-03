@@ -3,7 +3,7 @@ import { css, StyleSheet } from 'aphrodite';
 import { styles } from '../styles';
 import { Link, LinkProps } from './Link';
 
-// TODO: Update this
+// TODO: MongoDB,
 
 const Comp: React.SFC<LinkProps> = props => {
   return (
@@ -24,21 +24,27 @@ const Comp: React.SFC<LinkProps> = props => {
         </li>
         <li
           className={css(ownStyles.listItem, ownStyles.pink)}
-          style={{ width: '78%' }}
+          style={{ width: '81%' }}
         >
           Python
         </li>
         <li
           className={css(ownStyles.listItem, ownStyles.pink)}
-          style={{ width: '73%' }}
+          style={{ width: '74%' }}
         >
           Bash
         </li>
         <li
           className={css(ownStyles.listItem, ownStyles.pink)}
-          style={{ width: '68%' }}
+          style={{ width: '69%' }}
         >
           Ruby
+        </li>
+        <li
+          className={css(ownStyles.listItem, ownStyles.pink)}
+          style={{ width: '42%' }}
+        >
+          Swift
         </li>
         <li
           className={css(ownStyles.listItem, ownStyles.pink)}
@@ -69,28 +75,34 @@ const Comp: React.SFC<LinkProps> = props => {
         </li>
         <li
           className={css(ownStyles.listItem, ownStyles.green)}
-          style={{ width: '68%' }}
+          style={{ width: '69%' }}
+        >
+          Node.js
+        </li>
+        <li
+          className={css(ownStyles.listItem, ownStyles.green)}
+          style={{ width: '65%' }}
         >
           Electron
         </li>
         <li
           className={css(ownStyles.listItem, ownStyles.green)}
-          style={{ width: '66%' }}
-        >
-          Node
-        </li>
-        <li
-          className={css(ownStyles.listItem, ownStyles.green)}
-          style={{ width: '62%' }}
+          style={{ width: '61%' }}
         >
           Rails
         </li>
       </ul>
-      <div>Libraries</div>
+      <div>Libraries / Technologies</div>
       <ul className={css(styles.paragraph, ownStyles.list)}>
         <li
           className={css(ownStyles.listItem, ownStyles.blue)}
-          style={{ width: '94%' }}
+          style={{ width: '100%' }}
+        >
+          Jasmine
+        </li>
+        <li
+          className={css(ownStyles.listItem, ownStyles.blue)}
+          style={{ width: '98%' }}
         >
           RxJS
         </li>
@@ -98,7 +110,13 @@ const Comp: React.SFC<LinkProps> = props => {
           className={css(ownStyles.listItem, ownStyles.blue)}
           style={{ width: '85%' }}
         >
-          Jasmine
+          MongoDB
+        </li>
+        <li
+          className={css(ownStyles.listItem, ownStyles.blue)}
+          style={{ width: '83%' }}
+        >
+          WebRTC
         </li>
         <li
           className={css(ownStyles.listItem, ownStyles.blue)}
@@ -115,6 +133,12 @@ const Comp: React.SFC<LinkProps> = props => {
         >
           Git
         </li>
+        <li
+          className={css(ownStyles.listItem, ownStyles.pink)}
+          style={{ width: '83%' }}
+        >
+          Webpack
+        </li>
       </ul>
     </div>
   );
@@ -127,6 +151,7 @@ const ownStyles = StyleSheet.create({
   listItem: {
     color: 'white',
     display: 'block',
+    boxSizing: 'border-box',
     margin: '4px 0',
     padding: '2px 8px',
     borderRadius: '8px',

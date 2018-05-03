@@ -28,7 +28,7 @@ const Comp: React.SFC<LinkProps> = props => {
           </Link>
         </div>
         currently at <Link {...props}>K3</Link> (a web app development firm) for
-        2+ years, and has been working in tech related positions for 5+ years
+        2.5 years, and has been working in tech related positions for 6 years
       </li>
       <li className={css(styles.bulletPoint, styles.paragraph)}>
         <div className={css(styles.bold)}>

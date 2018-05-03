@@ -27,8 +27,8 @@ const Comp: React.SFC = () => {
         I was involved throughout the duration of the project, both front end
         and back end, from sorting out the specs with the client to seeing it to
         completion. My main challenge was mastering Angular 2 and writing tests
-        for it. As this project was heavily involved with money, making sure it
-        was as error-free was crucial.
+        for it. As this project was heavily involved with moving currency,
+        making sure it was as error-free was crucial.
       </div>
       <Image
         src={adventistGivingEnvelopeImage}
@@ -37,7 +37,7 @@ const Comp: React.SFC = () => {
         height={1612}
       />
       <div className={css(styles.paragraph, styles.essay)}>
-        Other skills I improved while working on Adventist Giving was
+        Some other skills I improved while working on Adventist Giving were
         prototyping with clients and creating Rails apps.
       </div>
     </div>

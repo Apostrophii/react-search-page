@@ -4,7 +4,7 @@ import { styles } from '../styles';
 import { Link, LinkProps } from './Link';
 import { Image } from './Image';
 
-const hubbubMockupImage = require('../images/hubbub-mockup.1000x625.png');
+const hubbubMockupImage = require('../images/hubbub-mockup.1000x545.png');
 const hubbubMockupBase64 = require('../base64-images/hubbub-mockup.ts').default;
 
 const Comp: React.SFC<LinkProps> = props => {
@@ -12,8 +12,7 @@ const Comp: React.SFC<LinkProps> = props => {
     <div>
       <div className={css(styles.paragraph)}>
         Hubbub is a remote presence application for distributed teams. It’s
-        designed to make calls, meetings, pairing, and anything in between
-        simple and easy when not everyone’s in the same room.
+        designed for calls, meetings, pairing, and anything in between.
       </div>
       {/* <div className={css(styles.paragraph)}>
         Feel free to give it a go and see what your team’s been missing at{' '}
@@ -25,7 +24,7 @@ const Comp: React.SFC<LinkProps> = props => {
         src={hubbubMockupImage}
         base64={hubbubMockupBase64}
         width={1000}
-        height={625}
+        height={545}
       />
     </div>
   );
