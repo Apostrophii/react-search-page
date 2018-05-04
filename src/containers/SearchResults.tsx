@@ -12,6 +12,7 @@ import { updateSearchTerm, updateLastHit } from '../actions';
 import { History, UnregisterCallback, LocationListener } from 'history';
 import DefaultResult from '../results/DefaultResult';
 import 'string_score';
+import {} from '@types/google.analytics';
 
 interface OwnProps {
   history: History;
@@ -46,6 +47,7 @@ class SearchResults extends React.Component<AllProps> {
         this.props.searchTerm !== hit.name
       ) {
         nextProps.history.push(this.toPath(nextProps.searchTerm));
+        ga('send', 'pageview', location.pathname);
       }
     }
 
