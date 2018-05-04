@@ -47,13 +47,6 @@ const Comp: React.SFC<LinkProps> = props => {
         tag="One of the classrooms where I studied"
       />
       <Image
-        src={classroomImage}
-        base64={classroomBase64}
-        width={1000}
-        height={563}
-        tag="One of the classrooms where I studied"
-      />
-      <Image
         src={tokyoSprawlImage}
         base64={tokyoSprawlBase64}
         width={1000}
@@ -77,10 +70,10 @@ const Comp: React.SFC<LinkProps> = props => {
       <div className={css(styles.paragraph, styles.essay)}>
         Especially in a city like Tokyo, which seems to go on and on past the
         horizon, there’s always something new to see, somewhere new to go. You
-        definitely don’t get bored. Getting sick of seeing so many people is
-        certainly a thing though. I’d never appreciated before how much privacy
-        living in America affords just by virtue of being to (comparatively)
-        sparsely populated.
+        definitely don’t get bored. Fatigue of seeing so many people is
+        certainly a part of life though. I’d never appreciated before how much
+        privacy living in America affords just by virtue of being to
+        (comparatively) sparsely populated.
       </div>
       <Image
         src={shibuyaImage}
@@ -109,7 +102,7 @@ const Comp: React.SFC<LinkProps> = props => {
       />
       <div className={css(styles.paragraph, styles.essay)}>
         I also got to do some traveling during the few breaks and holidays the
-        school had. On one of them Larissa (not yet my wife) flew out and we had
+        school had. On one of them Larissa (my then fiancée) flew out and we had
         a great time climbing Mt Fuji through the night to see the sunrise
         (which was amazing to see when you’re standing on an island in the
         clouds) and taking the shinkansen (bullet train) down to Nara, one of

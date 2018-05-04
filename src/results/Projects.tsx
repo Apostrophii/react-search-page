@@ -13,26 +13,43 @@ const Comp: React.SFC<LinkProps> = props => {
         <div className={css(styles.halfParagraph)}>
           <b>
             <Link {...props}>Hubbub</Link>
-          </b>{' '}
-          &ndash; Remote presence
+          </b>
+          , Remote presence
         </div>
         <div className={css(styles.halfParagraph)}>
           <b>
             <Link {...props}>Adventist Giving</Link>
-          </b>{' '}
-          &ndash; Donation platform
+          </b>
+          , Donation platform
         </div>
         <div className={css(styles.halfParagraph)}>
           <b>
             <Link {...props}>Global Youth Day</Link>
-          </b>{' '}
-          &ndash; Media sharing
+          </b>
+          , Media sharing
         </div>
         <div className={css(styles.halfParagraph)}>
           <b>
             <Link {...props}>AWR Stats</Link>
-          </b>{' '}
-          &ndash; Stats page
+          </b>
+          , Stats page
+        </div>
+      </div>
+      <div className={css(styles.largeParagraph)}>
+        <div className={css(styles.halfParagraph)}>Open source</div>
+        <div className={css(styles.halfParagraph)}>
+          <b>
+            <Link {...props} term="budou">
+              google/budou
+            </Link>
+          </b>
+        </div>
+        <div className={css(styles.halfParagraph)}>
+          <b>
+            <Link {...props} term="autonumeric">
+              autoNumeric/autoNumeric
+            </Link>
+          </b>
         </div>
       </div>
       <div className={css(styles.largeParagraph)}>

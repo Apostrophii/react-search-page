@@ -48,10 +48,6 @@ const Comp: React.SFC<LinkProps> = props => {
         height={458}
         tag="Image courtesy of montereybayacademy.org"
       />
-      <div className={css(styles.paragraph)}>
-        And I suppose for completeness I should include that I went to grade
-        school in Cali too.
-      </div>
     </div>
   );
 };

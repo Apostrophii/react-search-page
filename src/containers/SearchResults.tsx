@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { get as levenshtein } from 'fast-levenshtein';
 import { State } from '../state';
 import {
   ResultsContainer,
@@ -12,6 +11,7 @@ import { Dispatch } from 'redux';
 import { updateSearchTerm, updateLastHit } from '../actions';
 import { History, UnregisterCallback, LocationListener } from 'history';
 import DefaultResult from '../results/DefaultResult';
+import 'string_score';
 
 interface OwnProps {
   history: History;
@@ -93,18 +93,12 @@ function getResults(searchTerm: string) {
       },
     ];
   }
-  // if (searchTerm === '') {
-  //   return defaultList.map(r => ({
-  //     name: r.names[0],
-  //     component: r.component,
-  //   }));
-  // }
   return resultsList
     .map(r => ({
       ...r.names
         .map(n => ({
           name: n,
-          score: levPercentage(n, searchTerm) + subStringWeight(n, searchTerm),
+          score: n.score(searchTerm),
         }))
         .reduce((prev, curr) => (prev.score > curr.score ? prev : curr)),
       component: r.component,
@@ -112,16 +106,6 @@ function getResults(searchTerm: string) {
     .filter(r => r.score > MIN_PRECISION)
     .sort((a, b) => b.score - a.score)
     .slice(0, RESULTS_LENGTH);
-}
-
-function levPercentage(s1: string, s2: string) {
-  const distance = levenshtein(s1, s2);
-  const bigger = Math.max(s1.length, s2.length);
-  return (bigger - distance) / bigger;
-}
-
-function subStringWeight(s1: string, s2: string) {
-  return s1.indexOf(s2) !== -1 ? s2.length / 6 : 0;
 }
 
 const mapStateToProps = (state: State): Props => {

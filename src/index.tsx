@@ -26,8 +26,8 @@ const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter onUpdate={() => window.scrollTo(0, 0)}>
-      <Route path="/" component={App} />
+    <BrowserRouter>
+      <Route path="/" component={App} onEnter={() => window.scrollTo(0, 0)} />
     </BrowserRouter>
   </Provider>,
   document.getElementById('root'),

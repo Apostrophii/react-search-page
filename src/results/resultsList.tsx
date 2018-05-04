@@ -36,6 +36,8 @@ import UniverseRing from './UniverseRing';
 import NavalMineLamp from './NavalMineLamp';
 import StereoscopicVisualizer from './StereoscopicVisualizer';
 import Contact from './Contact';
+import Budou from './Budou';
+import Autonumeric from './Autonumeric';
 
 export interface LinkProps {
   link: (value: string) => UpdateSearchTermAction;
@@ -83,6 +85,8 @@ export const resultsList: ResultsList[] = [
   NavalMineLamp,
   StereoscopicVisualizer,
   Contact,
+  Budou,
+  Autonumeric,
 ];
 
 export const defaultList: ResultsList[] = [

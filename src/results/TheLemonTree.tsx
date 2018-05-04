@@ -44,7 +44,7 @@ const Comp: React.SFC<LinkProps> = props => {
           href="https://www.amazon.com/Lemon-Tree-Arab-Heart-Middle/dp/1582343438"
           target="_blank"
         >
-          &lt;Amazon&gt;
+          Amazon
         </a>{' '}
         if you fancy a read yourself : )
       </div>

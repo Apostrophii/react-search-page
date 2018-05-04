@@ -25,7 +25,7 @@ const Comp: React.SFC<LinkProps> = props => {
           href="http://store.steampowered.com/app/236850/Europa_Universalis_IV/"
           target="_blank"
         >
-          &lt;Steam&gt;
+          Steam
         </a>{' '}
         if I’ve interested you enough to give it a go. Be forewarned however! It
         has a pretty steep learning curve; I had to watch a few hours of videos
