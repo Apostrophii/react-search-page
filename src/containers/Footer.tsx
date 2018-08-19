@@ -5,7 +5,7 @@ import { Dispatch } from 'redux';
 import { updateSearchTerm } from '../actions';
 import { QuickLinks, DispatchProps } from '../components/QuickLinks';
 
-class SearchResults extends React.Component<DispatchProps> {
+class Footer extends React.Component<DispatchProps> {
   render() {
     return <QuickLinks {...this.props} />;
   }
@@ -17,8 +17,9 @@ const mapDispatchToProps = (dispatch: Dispatch<State>): DispatchProps => {
   };
 };
 
-const Footer = connect<{}, DispatchProps, {}>(undefined, mapDispatchToProps)(
-  SearchResults,
-);
+const ConnectedFooter = connect<{}, DispatchProps, {}>(
+  undefined,
+  mapDispatchToProps,
+)(Footer);
 
-export default Footer;
+export default ConnectedFooter;

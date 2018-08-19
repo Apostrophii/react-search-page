@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
   },
   paragraph: {
     marginBottom: '30px',
+    lineHeight: '32px',
   },
   halfParagraph: {
     marginBottom: '15px',
@@ -17,8 +18,14 @@ export const styles = StyleSheet.create({
   aside: {
     fontSize: '80%',
   },
+  sublist: {
+    fontSize: '90%',
+  },
   bulletPoint: {
     fontWeight: 300,
+  },
+  discList: {
+    listStyleType: 'disc',
   },
   bold: {
     display: 'inline',
